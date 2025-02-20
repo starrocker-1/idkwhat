@@ -1,0 +1,14 @@
+show=drun
+width=750
+height=400
+
+show_all=false
+allow-images=true
+image_size=25
+no_actions=true
+normal_window=true
+
+
+insensitive=true
+prompt= Sup, How you doing...?
+

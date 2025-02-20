@@ -1,0 +1,71 @@
+add_newline = true
+
+format = """$username\
+            $hostname\
+            $directory\
+            $git_branch\
+            $git_commit\
+            $git_state\
+            $git_status\
+            $fill\
+            $ruby\
+            $python\
+            $cmd_duration\
+            $time\
+            $character\ 
+            $line_break\
+            [ └─ ](#b5bfe2)"""
+[line_break]
+disabled = false
+
+[character]
+success_symbol = "[ ](bg:#292c3c fg:#c6a0f6)[  ](bg:#c6a0f6 fg:#0F111A)"
+error_symbol = "[ ](bg:#292c3c fg:#8aadf4)[  ](bg:#8aadf4 fg:#0F111A)"
+format = "$symbol"
+
+[cmd_duration]
+min_time = 0
+format = "[ $duration ](fg:#e5c890)"
+
+[time]
+disabled = false
+format = "[ ](fg:#292c3c)[ $time ](bg:#292c3c fg:#b5bfe2)"
+time_format = "%F %R"
+
+[username]
+show_always = true
+format = "[ ](fg:#b5bfe2 bg:#292c3c)[ $user](bg:#292c3c fg:#b5bfe2)"
+
+[hostname]
+ssh_only = false
+format = "[@$hostname ](bg:#292c3c fg:#b5bfe2)[ ](bg:black fg:#292c3c)"
+
+[directory]
+truncation_symbol = ".../"
+truncation_length = 3
+truncate_to_repo = false
+format = '[$path ](bg:#414868 fg:white)[ ](fg:#414868)'
+
+[git_branch]
+format = "[   $branch](bg:#24283b fg:white)"
+
+[git_commit]
+only_detached = false
+format = "[ \\($hash\\) ](bg:#24283b fg:white)"
+
+[git_status]
+ahead = "⇡$count "
+behind = "⇣$count "
+untracked = "?$count "
+stashed = "\\$$count "
+modified = "!$count "
+staged = "+$count "
+renamed = "»$count "
+deleted = "x$count "
+conflicted = "=$count "
+diverged = "⇕$count "
+format = "[$all_status$ahead_behind ](bg:#24283b fg:white)[](fg:#24283b)"
+
+[git_state]
+disabled = false
+format = "[ \\[$state\\($progress_current/$progress_total\\)\\] ](bg:#24283b fg:bold white)"
