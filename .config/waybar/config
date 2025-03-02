@@ -2,8 +2,13 @@
     "layer": "top", // Waybar at top layer
     "position": "top", // Waybar position (top|bottom|left|right)
     "height": 40,
+<<<<<<< HEAD
     "width":1920,
     "margin": "0 0 0 0",
+=======
+    "width":1910,
+    "margin": "3 0 0 0",
+>>>>>>> aafc29e (Updated everything)
     "spacing":0,
     "exclusive": "true",
 
@@ -42,6 +47,7 @@
 	"icon":true,
 	"icon-size" : 20
     },
+<<<<<<< HEAD
     "idle_inhibitor": {
         "format": "{icon}",
        "format-icons": {
@@ -49,6 +55,8 @@
             "deactivated": ""
         }
     },
+=======
+>>>>>>> aafc29e (Updated everything)
     "tray": {
         "icon-size": 20,
         "spacing": 5
@@ -99,7 +107,11 @@
    },
     "custom/launcher": {
     "format":"    ",
+<<<<<<< HEAD
     	"on-click": "exec nwg-drawer -c 7 -is 70 -spacing 23",
+=======
+    	"on-click": "exec nwg-drawer -mt 6 -mb 6 -mr 5 -ml 5",
+>>>>>>> aafc29e (Updated everything)
     	"tooltip": false,
      },
          "pulseaudio": {

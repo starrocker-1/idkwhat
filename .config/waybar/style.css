@@ -53,17 +53,29 @@ nord15 #b48ead
    }
 
 window#waybar {
+<<<<<<< HEAD
     background:rgba (30, 30, 46, 0.7);
     border-radius: 20px 20px 20px 20px; 
+=======
+    background:rgba (30, 30, 46, 0.95);
+    border-radius: 9px 9px 9px 9px; 
+>>>>>>> aafc29e (Updated everything)
 }
 
 #workspaces button {
     padding: 2px 0px;
     border-bottom: 2px;
     color: #c6a0f6;
+<<<<<<< HEAD
     border-color: #91d7e3;
     border-style: solid;
     margin-top:2px;
+=======
+    border-color: #8aadf4;
+    border-style: solid;
+    margin-top:2px;
+    margin-left: 0px;
+>>>>>>> aafc29e (Updated everything)
 }
 
 #workspaces button.active {
@@ -71,7 +83,11 @@ window#waybar {
 }
 
 #clock, #battery, #cpu, #memory,#idle_inhibitor, #temperature,#custom-keyboard-layout, #custom-go-pray, #network, #pulseaudio, #tray, #window,#custom-launcher,#custom-power,#custom-updates ,#custom-network_traffic,#custom-weather{
+<<<<<<< HEAD
     padding: 0 3px;
+=======
+    padding: 0 2px;
+>>>>>>> aafc29e (Updated everything)
     border-bottom: 2px;
     border-style: solid;
 }
@@ -142,6 +158,11 @@ window#waybar {
         background-repeat: no-repeat;
         background-size: 32px;
         border-style: hidden;
+<<<<<<< HEAD
+=======
+        padding: 0px;
+        margin: 0px;
+>>>>>>> aafc29e (Updated everything)
 }
 
 #custom-power{
@@ -156,4 +177,7 @@ window#waybar {
 #custom-go-pray{
     color: #c6a0f6;
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> aafc29e (Updated everything)

@@ -7,11 +7,22 @@
 # For starship
 eval "$(starship init bash)"
 
+<<<<<<< HEAD
 set -o vi
 
 # Aliases
 alias ls='lsd'
 alias grep='grep --color=always'
+=======
+# For vim mode in bash
+set -o vi
+
+# Aliases
+alias ls='lsd --color=always --icon=always'
+alias grep='grep --color=always'
+alias less='less -Rr'
+alias nwg-drawer='nwg-drawer -mt 6 -mb 6 -mr 5 -ml 5'
+>>>>>>> aafc29e (Updated everything)
 
 # Created by `pipx` on 2025-02-03 21:19:10
 export PATH="$PATH:/home/starrocker/.local/bin"
@@ -20,11 +31,18 @@ export EDITOR=nvim
 
 # For TUIR
 export TUIR_BROWSER=mpv
+<<<<<<< HEAD
 export BROWSER=w3m
 
 # Bash history
 export HISTFILESIZE=1000000
 export HISTSIZE=1000000
+=======
+
+# Bash history
+export HISTFILESIZE=10000000
+export HISTSIZE=10000000
+>>>>>>> aafc29e (Updated everything)
 
 # fzf catppuccin theme
 export FZF_DEFAULT_OPTS=" \
@@ -34,4 +52,14 @@ export FZF_DEFAULT_OPTS=" \
 --color=selected-bg:#45475a \
 --multi"
 
+<<<<<<< HEAD
 alias dotfiles=/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME
+=======
+# fzf key-bindings
+source /usr/share/fzf/key-bindings.bash
+
+
+export QT_QPA_PLATFORMTHEME=gtk3
+
+
+>>>>>>> aafc29e (Updated everything)
