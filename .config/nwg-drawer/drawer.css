@@ -1,22 +1,12 @@
-<<<<<<< HEAD
-window {
-    background-color: rgba(30, 30, 46, 0.95);
-    color: #eeeeee
-=======
 window, dialog, .background {
     background-color: rgba(30, 30, 46, 0.95);
     color: #eeeeee;
     border-radius: 10px;
->>>>>>> aafc29e (Updated everything)
 }
 
 /* search entry */
 entry {
-<<<<<<< HEAD
-    background-color: rgba (0, 0, 0, 0.2)
-=======
     background-color: rgba (30, 30, 46, 0.2);
->>>>>>> aafc29e (Updated everything)
 }
 
 button, image {
@@ -25,11 +15,7 @@ button, image {
 }
 
 button:hover {
-<<<<<<< HEAD
-    background-color: rgba (198, 160, 245, 0.6)
-=======
     background-color: rgba (137, 180, 250, 0.6)
->>>>>>> aafc29e (Updated everything)
 }
 
 /* in case you wanted to give category buttons a different look */
