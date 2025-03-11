@@ -20,5 +20,6 @@ return {
       vim.api.nvim_set_hl(0, 'RenderMarkdownFail', {fg = '#e85b6c'})
       vim.api.nvim_set_hl(0, 'RenderMarkdownChecked', {fg = '#a6e3a1'})
       vim.api.nvim_set_hl(0, 'RenderMarkdownTodo', {fg = '#fae3b0'})
+      vim.api.nvim_set_hl(0, 'RenderMarkdownQuote', {fg = '#cba6f7'})
     end,
 }
