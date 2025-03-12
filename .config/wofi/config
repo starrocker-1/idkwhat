@@ -1,13 +1,19 @@
 show=drun
-width=750
+width=650
 height=400
 
 show_all=false
 allow-images=true
+allow-markup=true
 image_size=25
+
 no_actions=true
 normal_window=true
+hide_scroll=true
+term=kitty
 
+key_down=Ctrl-n
+key_up=Ctrl-p
 
 insensitive=true
 prompt= Sup, How you doing...?
