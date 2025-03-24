@@ -15,15 +15,15 @@ local lazy_config = require "configs.lazy"
 
 -- load plugins
 require("lazy").setup({
-  {
-    "NvChad/NvChad",
-    lazy = false,
-    branch = "v2.5",
-    import = "nvchad.plugins",
-  },
+   {
+     "NvChad/NvChad",
+     lazy = false,
+     branch = "v2.5",
+     import = "nvchad.plugins",
+   },
 
-  { import = "plugins" },
-}, lazy_config)
+   { import = "plugins" },
+ }, lazy_config)
 
 require("image").setup({
   backend = "kitty",
@@ -334,7 +334,7 @@ require('render-markdown').setup({
     --  double: use double line border characters
     --  round:  use round border corners
     --  none:   does nothing
-    preset = 'full',
+    preset = 'heavy',
     -- Determines how the table as a whole is rendered:
     --  none:   disables all rendering
     --  normal: applies the 'cell' style rendering to each row of the table
@@ -472,7 +472,6 @@ require('render-markdown').setup({
     skip_heading = false,
   },
 })
-
 
 -- load theme
 dofile(vim.g.base46_cache .. "defaults")

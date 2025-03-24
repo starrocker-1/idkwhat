@@ -28,6 +28,11 @@ return {
   },
 
   {
+    "nvim-tree/nvim-tree.lua",
+    lazy = false,  -- Disable lazy loading
+  },
+
+  {
     "3rd/image.nvim",
     opts = {}
   },
