@@ -16,7 +16,8 @@ $logout" | wofi -dip "Bye!! Have a nice day! " -W 550 -H 215 )
 #  echo "You have nothing set for this options!!"
 if [ "$selected_option" == "$logout" ]
 then
- loginctl terminate-user `whoami`
+  hyprctl dispatch exit
+ # loginctl terminate-user `whoami`
 elif [ "$selected_option" == "$poweroff" ]
 then
   systemctl poweroff
