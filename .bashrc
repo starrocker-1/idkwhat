@@ -15,7 +15,6 @@ alias ls='lsd -lA --color=always --icon=always'
 alias grep='grep --color=always'
 alias less='less -Rr'
 alias nwg-drawer='nwg-drawer -mt 6 -mb 6 -mr 5 -ml 5'
-# alias nvim="nvim +'lua require(\"nvim-tree.api\").tree.open()'"
 
 # Created by `pipx` on 2025-02-03 21:19:10
 export PATH="$PATH:/home/starrocker/.local/bin"

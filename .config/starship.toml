@@ -42,7 +42,7 @@ format = "[@$hostname ](bg:#292c3c fg:#b5bfe2)[ ](bg:black fg:#292c3c)"
 
 [directory]
 truncation_symbol = ".../"
-truncation_length = 3
+truncation_length = 2
 truncate_to_repo = false
 format = '[$path ](bg:#414868 fg:white)[ ](fg:#414868)'
 

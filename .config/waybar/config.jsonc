@@ -1,0 +1,123 @@
+{
+  "layer": "top", // Waybar at top layer
+  "output": "HDMI-A-2",
+  "position": "top", // Waybar position (top|bottom|left|right)
+  "margin": "5 5 0 5",
+  "exclusive": "true",
+
+  "modules-left": ["custom/launcher", "hyprland/workspaces"],
+  "modules-center": ["custom/go-pray"],
+  "modules-right": ["temperature", "cpu", "memory", "pulseaudio", "network", "tray", "clock","custom/power"],
+
+    // Modules configuration
+
+    "hyprland/workspaces": {
+      "format": "{icon}",
+      "on-click": "activate",
+      "all-outputs": true,
+      "sort-by-number": true,
+      "format-icons": {
+        "1": "1",
+        "2": "2",
+        "3": "3",
+        "4": "4",
+        "5": "5",
+        "6": "6",
+        "7": "7",
+        "8": "8",
+        "9": "9",
+        "10": "10",
+        // "active": "",
+        // "default": ""
+      },
+      "on-scroll-up": "hyprctl dispatch workspace e+1",
+      "on-scroll-down": "hyprctl dispatch workspace e-1",
+    },
+    "hyprland/window": {
+      "format": "{}",
+      "icon":true,
+      "icon-size" : 20
+    },
+    "tray": {
+      "icon-size": 20,
+      "spacing": 5
+    },
+    "clock": {
+      "tooltip-format": "<big>{:%A, %d.%B %Y }</big>\n<tt><small>{calendar}</small></tt>",
+      "format": " {:%a %d %b  %I:%M %p}",	//24 hour format
+                                            //"format": " {:%a %d %b  %I:%M %p}",	//12 hour format
+                                            "format-alt": " {:%d/%m/%Y  %H:%M}",
+      //"max-length": 200
+      "interval": 60,
+      "on-click-right": "~/.config/waybar/scripts/OCV",
+    },
+    "cpu": {
+      "format": "🖳{usage}%",
+      "on-click": "kitty -e btop"
+    },
+    "memory": {
+      "format": "🖴 {: >3}%",
+      "on-click": "kitty -e btop"
+    },
+    "temperature": {
+      "thermal-zone": 2,  // Check with: # cat /sys/class/hwmon/hwmon*/temp1_input
+      "hwmon-path": "/sys/class/hwmon/hwmon1/temp1_input",
+      "critical-threshold": 80,
+      "format-critical": "{temperatureC}°C ",
+      "format": "{temperatureC}°C "
+    },
+    "network": {
+      //"interface": "wlp0s20f3", // (Optional) To force the use of this interface  "format-wifi": "  {essid}",
+      "format": "⚠ Disabled",
+      "format-wifi": " ",
+      "format-ethernet": "",
+      "format-linked": "{ifname} (No IP)",
+      "format-disconnected": "⚠ Disabled",
+      "format-alt": "{ifname}: {ipaddr}/{cidr}",
+      "family": "ipv4",
+      "tooltip-format-wifi": "  {ifname} @ {essid}\nIP: {ipaddr}\nStrength: {signalStrength}%\nFreq: {frequency}MHz\nUp: {bandwidthUpBits} Down: {bandwidthDownBits}",
+      "tooltip-format-ethernet": " {ifname}\nIP: {ipaddr}\n up: {bandwidthUpBits} down: {bandwidthDownBits}",
+      //"min-length": 2,
+      //"max-length": 2,
+      "on-click": "nm-connection-editor"
+    },
+    "custom/power": {
+      "format":"⏻",
+      "on-click": "/home/starrocker/.config/wofi/scripts/powermenu",
+      "tooltip": false
+    },
+    "custom/launcher": {
+      "format":"    ",
+      "on-click": "exec nwg-drawer -mt 6 -mb 6 -mr 5 -ml 5",
+      "tooltip": false
+    },
+    "pulseaudio": {
+      "scroll-step": 3, // %, can be a float
+      "format": "{icon}  {volume}% {format_source}",
+      "format-bluetooth": "{volume}% {icon} {format_source}",
+      "format-bluetooth-muted": " {icon} {format_source}",
+      "format-muted": " {format_source}",
+      //"format-source": "{volume}% ",
+      //"format-source-muted": "",
+      "format-source": "",
+      "format-source-muted": "",
+      "format-icons": {
+        "headphone": "",
+        "hands-free": "",
+        "headset": "",
+        "phone": "",
+        "portable": "",
+        "car": "",
+        "default": ["", "", ""]
+      },
+      "on-click": "pavucontrol",
+      "on-click-right": "pactl set-source-mute @DEFAULT_SOURCE@ toggle"
+    },
+    "custom/go-pray": {
+      "interval": 60,
+      "exec": "go-pray next",
+      "on-click": "go-pray calendar | wofi -dip 'Prayer Time' -W 250 -H 315",
+      "tooltip": true,
+      "format": "󱠧  {}"
+    }
+}
